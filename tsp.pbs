@@ -1,0 +1,63 @@
+#!/bin/bash
+
+#PBS -l nodes=1:ppn=1,walltime=3:00
+
+#PBS -N mpiTestJob
+
+#PBS -q edu_shared
+
+#PBS -m abe
+
+#PBS -M skorli2@uic.edu
+
+#PBS -e tsp.err
+
+#PBS -o tsp.out
+
+#PBS -d /export/home/skorli2/mpitest/ring
+
+module load tools/mpich2-1.5-gcc
+
+mpiexec -machinefile $PBS_NODEFILE -np $PBS_NP ./tsp_2 -f usa13509.tsp -t nn -c -n 512  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
